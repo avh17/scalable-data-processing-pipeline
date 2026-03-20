@@ -2,10 +2,7 @@ A real-time, highly available data processing pipeline built on Kubernetes that 
 
 ## Architecture
 
-```
 <img width="1672" height="878" alt="image" src="https://github.com/user-attachments/assets/ab4bcd99-37e3-4e22-8cd4-7042b6daf98d" />
-
-```
 
 ## Overview
 
