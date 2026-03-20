@@ -3,23 +3,8 @@ A real-time, highly available data processing pipeline built on Kubernetes that 
 ## Architecture
 
 ```
-                                    ┌─────────────────────────────────────────────────┐
-                                    │                  Kubernetes (Minikube)           │
-                                    │                                                 │
-                                    │  ┌──────────────┐      ┌───────────────┐        │
-                                    │  │  Deployment   │      │  Deployment   │        │
- ┌──────────────┐   Load Balancer   │  │    (Kafka)    │◄────►│  (Zookeeper)  │        │
- │    Source     │─────────────────► │  │              │      │               │        │
- │ Data Stream  │                   │  └──────┬───────┘      └───────────────┘        │
- └──────────────┘                   │         │                                       │
-                                    │         ▼                                       │
-                                    │  ┌──────────────┐      ┌───────────────┐        │
-                                    │  │  Deployment   │      │  StatefulSet  │        │   Load Balancer   ┌────────────┐
-                                    │  │(Kafka Connect)│─────►│    (Neo4j)    │────────│──────────────────► │ interface.py│
-                                    │  │              │      │               │        │                   │ (Analytics) │
-                                    │  └──────────────┘      └───────────────┘        │                   └────────────┘
-                                    │                                                 │
-                                    └─────────────────────────────────────────────────┘
+<img width="1672" height="878" alt="image" src="https://github.com/user-attachments/assets/ab4bcd99-37e3-4e22-8cd4-7042b6daf98d" />
+
 ```
 
 ## Overview
